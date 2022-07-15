@@ -1,14 +1,7 @@
 filebeat.inputs:
 - type: filestream
   enabled: true
-  parsers:
-    - multiline:
-        type: pattern
-        pattern: '^[[:space:]]Event:'
-        negate: false
-        match: after
-  include_lines: ['Event:']
   paths:
-   - "/usr/share/logs_loc/wso2carbon*.log"
+    - "/Users/avarjana/Documents/Work/WSO2 IS/wso2is-5.12.0-alpha20/repository/logs/audit*.log"
 output.logstash:
   hosts: ["logstash:5044"]
