@@ -2,6 +2,6 @@ filebeat.inputs:
 - type: filestream
   enabled: true
   paths:
-    - "/Users/avarjana/Documents/Work/WSO2 IS/wso2is-5.12.0-alpha20/repository/logs/audit*.log"
+    - "/usr/share/logs_loc/audit*.log"
 output.logstash:
   hosts: ["logstash:5044"]
